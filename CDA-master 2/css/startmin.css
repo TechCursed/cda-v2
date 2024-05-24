@@ -168,6 +168,10 @@ body {
    transition: all .5s;
 }
 
+.btn-primary {
+   background-color: #304666;
+}
+
 .btn-primary.btn-outline {
    color: #428bca;
 }
@@ -187,6 +191,8 @@ body {
 .btn-danger.btn-outline {
    color: #d9534f;
 }
+
+
 
 .btn-primary.btn-outline:hover,
 .btn-success.btn-outline:hover,
@@ -661,14 +667,37 @@ table.dataTable thead .sorting:after {
 
 /* Custom CSS */
 
+.loader {
+   border: 16px solid #f3f3f3; /* Light grey */
+   border-top: 16px solid #3498db; /* Blue */
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   animation: spin 2s linear infinite;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1000;
+   display: none; /* Initially hidden */
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}
+
+
+
 #page-wrapper{
    margin-top: 50px;
 }
 
 .my-custom-navbar {
-   background-color: #3279B7;
+   background-color: #304666;
    margin-bottom: 600px;
    color: white;
+   max-height: 80px;
 }
 
 a:hover{
@@ -678,6 +707,11 @@ a:hover{
 button:hover{
    background-color: #3279B7;
 
+}
+
+.dropdown-toggle{
+   max-height: 80px;
+   background-color: #304666;
 }
 /* CSS FOR THE UPLOAD MODULE */
 @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');
@@ -730,23 +764,10 @@ button:hover{
    color: white;
 }
   
-  /* .bottoms{
-      display: flex;
-      justify-content: space-between;
-      background-color: #3279B7;
-  }
-  
-  .bottoms-content{
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 10px;
-      padding-bottom: 0;
-  } */
-
   .bottoms {
    display: flex;
    justify-content: space-between;
-   background-color: #3279B7;
+   background-color: #304666;
    color: white;
    /* padding: 10px 20px; */
    width: 100%;
@@ -853,15 +874,6 @@ button:hover{
    border-color: #007bff;
 }
 
-/* Custom styles for File Analysis */
-/* #fileAnalysis {
-   margin-top: 20px;
-   padding: 10px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   background-color: #f9f9f9;
-} */
-
 /* Custom styles for Generate */
 #generate {
    margin-top: 20px;
@@ -895,91 +907,6 @@ button:hover{
 .panel button{
    margin-top: 4px;
 }
-
-
-/* MODAL STYLES */
-
- /* Modal Styles */
- /* Modal styles */
-/* .modal {
-   display: none;
-   position: fixed;
-   z-index: 1;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   overflow: auto;
-   background-color: rgba(0, 0, 0, 0.4);
- }
- 
- .modal-content {
-   background-color: #fefefe;
-   margin: 15% auto;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 80%;
-   max-width: 600px;
-   position: relative;
- }
- 
- .close {
-   color: #aaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
- }
- 
- .close:hover,
- .close:focus {
-   color: black;
-   text-decoration: none;
-   cursor: pointer;
- }
-  */
- /* Table styles */
- /* table {
-   width: 100%;
-   border-collapse: collapse;
-   margin-top: 20px;
- }
- 
- th, td {
-   padding: 8px;
-   text-align: left;
-   border-bottom: 1px solid #ddd;
- } */
- 
- /* Input group styles */
- /* .input-group {
-   margin-top: 10px;
- }
- 
- label {
-   display: inline-block;
-   width: 150px;
-   font-weight: bold;
- }
- 
- input[type="number"],
- input[type="text"] {
-   padding: 5px;
-   width: 200px;
- } */
- 
- /* Button styles */
- /* button {
-   background-color: #4CAF50;
-   color: white;
-   padding: 10px 20px;
-   border: none;
-   cursor: pointer;
-   margin-top: 20px;
- }
- 
- button:hover {
-   background-color: #45a049;
- } */
 
      /* Style for the container */
      .uploadDiv {
